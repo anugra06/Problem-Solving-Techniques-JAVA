@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+class UserMainCode
+{
+    // Read only region start
+    public int sumOfSumsOfDigits(int input1) {
+        // Read only region end
+
+        String s = String.valueOf(input1);
+        int totalSum = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            int currentSum = 0;
+            for (int j = i; j < s.length(); j++) {
+                currentSum += s.charAt(j) - '0';
+            }
+            totalSum += currentSum;
+        }
+
+        return totalSum;
+    }
+}
